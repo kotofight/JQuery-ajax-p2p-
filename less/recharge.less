@@ -1,0 +1,56 @@
+.recharge {
+    .recharge-head {
+        border-left: 2px solid #7aa4c8;
+    }
+
+    .tab {
+        ul {
+            &.rechage-tab {
+                li {
+                    p {
+                        padding    : 10px 20px;
+                        display    : flex;
+                        align-items: center;
+                        border     : 2px solid #7aa4c8;
+                        position   : relative;
+                        z-index    : 3;
+
+                        &.on {
+                            border-bottom: 2px solid #fff;
+                        }
+                    }
+                }
+            }
+
+            &.rechage-content {
+                li {
+                    position: relative;
+                    z-index : 2;
+                    top     : -2px;
+                    border  : 2px solid #7aa4c8;
+
+                    .bank {
+                        display   : block;
+                        width     : 140px;
+                        height    : 30px;
+                        background: url(../../imgs/bank_list.png) no-repeat;
+                    }
+
+                    .bank2 {
+                        background-position: 0 -40px;
+                    }
+
+                    .bank3 {
+                        background-position: 0 -80px;
+                    }
+
+                    .recharge-step {
+                        color: #7aa4c8;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

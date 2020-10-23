@@ -1,0 +1,40 @@
+@import './common.less';
+
+
+
+// 主体
+.main {
+    section {
+        background     : url(../../imgs/loginBanner.jpg) center;
+        background-size: cover;
+
+        .container {
+            height: 540px;
+
+            div.login {
+                height          : 380px !important;
+                width           : 410px !important;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius   : 10px;
+            }
+
+            div.form-horizontal {
+                p {
+                    line-height: 38px;
+
+                    a {
+                        color: @colorfff;
+                    }
+                }
+
+                p {
+                    span {
+                        display : inline-block;
+                        position: absolute;
+                    }
+                }
+            }
+
+        }
+    }
+}

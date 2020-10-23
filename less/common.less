@@ -1,0 +1,133 @@
+// 颜色
+@colorfff : #fff;
+@colorlogo: #1C3368;
+
+ul {
+    list-style: none;
+    padding   : 0;
+    margin    : 0;
+}
+
+.fs14 {
+    font-size: 14px;
+}
+
+.fs20 {
+    font-size: 20px;
+}
+
+.fs24 {
+    font-size: 24px;
+}
+
+.fs30 {
+    font-size: 30px;
+}
+
+.fs32 {
+    font-size: 32px;
+}
+
+.fs36 {
+    font-size: 36px;
+}
+
+.fs40 {
+    font-size: 40px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.container {
+
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+    }
+
+}
+
+// 头部
+.header {
+    background-color: #333333;
+    height          : 50px;
+
+    ul {
+        li {
+            a {
+                color      : @colorfff;
+                height     : 50px;
+                display    : flex;
+                align-items: center;
+
+                &:hover {
+                    color: #50C223;
+                }
+            }
+        }
+    }
+}
+
+
+.indexNav {
+    ul {
+        height: 100px;
+    }
+
+    .nav-link {
+        a {
+            display    : inline-block;
+            height     : 100%;
+            line-height: 100px;
+            font-weight: bold;
+            color      : #6C757D;
+
+            &:hover {
+                color          : #50C223;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+}
+
+
+// 尾部
+.footer {
+    background-color: #4B4B4B;
+    color           : @colorfff;
+
+    a {
+        color: @colorfff;
+    }
+
+    .container {
+        .web {
+            img {
+                width : 160px;
+                height: 65px;
+            }
+        }
+
+        .wx {
+            img {
+                width : 160px;
+                height: 160px;
+            }
+        }
+
+        .imgbc {
+            background-color: @colorfff;
+        }
+    }
+}
+
+.iconfont {
+    color: @colorfff;
+}
+
+.tel {
+    color: @colorfff;
+}
