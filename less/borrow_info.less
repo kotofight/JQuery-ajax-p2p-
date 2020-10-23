@@ -1,3 +1,14 @@
+.borrow-info {
+    background     : url(../../imgs/loginbc2.jpg) no-repeat;
+    background-size: cover;
+    padding        : 50px 0;
+}
+
+.borrow-info-content {
+    background-color: #fff;
+    padding         : 40px 90px;
+}
+
 .person-borrow-info-box1 {
     border: 1px solid #DDD;
 
@@ -16,10 +27,16 @@
 
         span {
             display    : inline-block;
-            color      : #7aa4c8;
+            color      : #f17d1d;
             font-weight: bold;
             margin-left: 30px;
         }
+    }
+}
+
+.person-borrow-info-box3 {
+    .modal-dialog {
+        overflow-y: hidden;
     }
 }
 
@@ -50,8 +67,6 @@
 
 .progress {
     .progress-bar {
-
-
         .progress-value {
             display      : block;
             font-size    : 13px;
@@ -63,7 +78,7 @@
             top          : -40px;
             right        : -27px;
 
-            &:after {
+            &::after {
                 content      : "";
                 border-top   : 5px solid #191919;
                 border-left  : 5px solid #191919;

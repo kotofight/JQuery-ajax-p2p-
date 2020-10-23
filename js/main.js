@@ -1,8 +1,7 @@
 $(function () {
-    const pageSize = 7;
+    const pageSize = 10;
     const page = 1;
     let flag = false;
-    let arr = []
     // alert(111)
     function getlist(page) {
         $.ajax({
@@ -17,7 +16,6 @@ $(function () {
                 let str = ''
                 if (code === 200) {
                     let data = res.data
-                    arr = []
                     for (let key in data) {
                         str += `
                         <tr>
@@ -27,22 +25,19 @@ $(function () {
                         <td>${data[key].borrowmoney}</td>
                         <td>${data[key].repaytype = 0 ? '按月分期' : '按月到期'}</td>
                         <td>${((data[key].ownmoney / data[key].borrowmoney) * 100).toFixed(2)}%</td>
-                        <td><button class="btn btn-warning btn-sm text-white invest-btn">查看</button></td>
+                        <td><button class="btn btn-warning btn-sm text-white">查看</button></td>
                     </tr>
                         `
-                        arr.push(data[key].id)
                     }
-                    $('#investBody').html(str)
-                    console.log(arr)
+                    $('#main-borrow-list').html(str)
                     if (!flag) {
-                        $("#page1").paging({
+                        $("#page").paging({
                             pageNum: page, // 当前页面
                             totalNum: Math.ceil(total / pageSize), // 总页码
                             totalList: total, // 记录总数量
                             callback: function (num) { //回调函数
                                 getlist(num)
                             }
-
                         });
                         flag = true
                     }
@@ -56,9 +51,5 @@ $(function () {
         })
     }
     getlist(page)
-    $('#investBody').on('click', '.invest-btn', function () {
-        let index = $(this).index('.invest-btn')
-        localStorage.setItem('id', arr[index])
-        location.href = '#borrow_info'
-    })
+
 })

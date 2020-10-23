@@ -16,6 +16,9 @@ $(function () {
             case 'invest':
                 $('#content').load('../pages/invest.html')
                 break;
+            case 'borrow_apply':
+                $('#content').load('../pages/borrow_apply.html')
+                break;
             case 'recharge':
                 $('#content').load('../pages/recharge.html')
                 break;
@@ -31,9 +34,7 @@ $(function () {
             case 'personal/info':
                 loadChildChange(hash)
                 break;
-            case 'personal/borrow_apply':
-                loadChildChange(hash)
-                break;
+
             case 'personal/realname':
                 loadChildChange(hash)
                 break;
@@ -47,6 +48,9 @@ $(function () {
                 loadChildChange(hash)
                 break;
             case 'personal/userInfo':
+                loadChildChange(hash)
+                break;
+            case 'personal/invest_list':
                 loadChildChange(hash)
                 break;
             default:
@@ -64,7 +68,14 @@ $(function () {
     loadPage();
     function changeActive(hash) {
         hash = hash.split('/')[0];
+        console.log(hash)
         // console.log($(`#headnavmenu a[href="#${hash}"]`))
+
+        if (hash == 'borrow_apply') {
+            hash = 'borrow'
+        } else if (hash == 'borrow_info') {
+            hash = 'invest'
+        }
         $(`#headnavmenu a`).removeClass('active')
         $(`#headnavmenu a[href="#${hash}"]`).addClass('active')
     }
@@ -72,6 +83,8 @@ $(function () {
         // console.log($(`#headnavmenu a[href="#${hash}"]`))
         $(`#left-side a`).removeClass('active')
         $(`#left-side a[href="#${hash}"]`).addClass('active')
+        $(`.head-href`).removeClass('active')
+        // console.log($(`.head-href`))
     }
     function loadChildChange(hash) {
         let isRightExit = $('#right-side').length == 1 ? true : false;
@@ -98,10 +111,22 @@ $(function () {
         $('#regnav').html(`<a class="nav-link" href="./register.html">快速注册</a>`)
     }
     $('#regnav').on('click', 'a', function () {
-        localStorage.clear();
+        localStorage.removeItem('user');
         location.href = '../index.html'
     })
 
 
     window.onhashchange = loadPage;
+    if (user) {
+        $('.header .headnav-withlogin').html(`<a class="nav-link" href="#recharge">赶快充值</a>`)
+        $('#headnavmenu').html(`<li class="nav-link"><a class="active disabled" href="#">首页</a></li>
+        <li class="nav-link headnav-withlogin"><a href="#invest">我要投资</a></li>
+        <li class="nav-link headnav-withlogin"><a href="#borrow">我要借款</a></li>
+        <li class="nav-link headnav-withlogin"><a href="#personal">个人中心</a></li>`)
+        changeActive(location.hash.substr(1).split('/')[0])
+    } else {
+        $('#headnavmenu').html(`<li class="nav-link"><a class="active disabled" href="#">首页</a></li>
+        `)
+        $('.headnav .head-slogan').html(`<span class="slogan1">用心</span><span class="slogan2 ml-3">--只为更多选择。</span>`)
+    }
 })

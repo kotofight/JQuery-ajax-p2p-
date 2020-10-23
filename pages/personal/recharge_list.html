@@ -5,43 +5,30 @@
         <a type="button" class="btn btn-danger text-white" href="#recharge">账户充值</a>
     </div>
     <table class="table">
-        <tr>
-            <th>
-                <p>充值时间</p>
-            </th>
-            <th>
-                <p>充值金额</p>
-            </th>
-            <th>
-                <p>充值状态</p>
-            </th>
-            <th>
-                <p>备注</p>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <p>2015-03-11 10:45:10</p>
-            </td>
-            <td>
-                <p>500.00</p>
-            </td>
-            <td>
-                <p>充值成功</p>
-            </td>
-            <td>
-                <p>线下充值500</p>
-            </td>
-        </tr>
+        <thead>
+            <tr>
+                <th>
+                    <p>充值时间</p>
+                </th>
+                <th>
+                    <p>银行</p>
+                </th>
+                <th>
+                    <p>支行</p>
+                </th>
+                <th>
+                    <p>充值金额</p>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody id="recharge-list-tbody">
+
+        </tbody>
     </table>
+    <div id="page5" class="page_div text-center"></div>
 </div>
-<nav aria-label="Page navigation example">
-    <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="#">上一页</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">下一页</a></li>
-    </ul>
-</nav>
+
 <script src="../../js/recharge_list.js"></script>
+<script src="../lib/paging/js/pageMe.js"></script>
+<link rel="stylesheet" href="../../dist/css/invest.min.css">

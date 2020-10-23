@@ -1,278 +1,151 @@
-<div class="container">
-    <div class="row">
-        <div class="col-3 person-borrow-info-box1">
-            <p class="fs24 p-3">借款人</p>
-            <div>
-                <div class="text-center">
-                    <img src="../imgs/head.jpg" alt="">
-                    <p><a href="#">鸣人</a></p>
-                </div>
+<div class="borrow-info">
+    <div class="container borrow-info-content">
+        <div class="row">
+            <div class="col-3 person-borrow-info-box1">
+                <p class="fs24 p-3">借款人</p>
+                <div>
+                    <div class="text-center">
+                        <img src="../imgs/head.jpg" alt="">
+                        <p><a href="#" id="borrow-info-username" style="color:#f17d1d">鸣人</a></p>
+                    </div>
 
-                <p class="mt-3">籍贯： 四川 - 成都</p>
-                <p class="mt-3">专职客服：<a href="#">码妹妹</a></p>
-                <p class="mt-3 mb-3">认证信息：</p>
+                    <p class="mt-3">籍贯： 四川 - 成都</p>
+                    <p class="mt-3">专职客服：<a href="#" style="color:#f17d1d">码妹妹</a></p>
+                    <p class="mt-3 mb-3">认证信息：<span class="badge badge-primary text-white">已认证</span></p>
+                </div>
             </div>
-        </div>
-        <div class="col-6 person-borrow-info-box2">
-            <p class="fs24">鸣人借款<span class="badge badge-primary text-white">信</span></p>
-            <p>借款金额<span>2,000.00</span></p>
-            <p>年化利率<span>10.00%</span></p>
-            <p>借款期限<span>3月</span></p>
-            <p>投标奖励<span>0.00</span></p>
-            <p>还款方式<span>按月分期还款</span></p>
-            <p>最小投标<span>20.00</span></p>
-        </div>
-        <div class="col-3 person-borrow-info-box3">
-            <p>投标总数<span>0</span></p>
-            <p>还需金额<span>0.00元</span></p>
-            <div class="row">
-                <div class="col-md-offset-3 col-md-10">
-                    <div class="progress">
-                        <div class="progress-bar"
+            <div class="col-6 person-borrow-info-box2 pl-5">
+                <p class="fs24"><span id="borrow-info-title">鸣人借款</span><span
+                        class="badge badge-primary text-white">信</span></p>
+                <p>借款金额<span id="borrow-info-borrowmoney"></span></p>
+                <p>年化利率<span id="borrow-info-interest">10.00%</span></p>
+                <p>借款期限<span id="borrow-info-borrowtime">3月</span></p>
+                <p>投标奖励<span>0.00￥</span></p>
+                <p>还款方式<span id="borrow-info-repaytype">按月分期还款</span></p>
+                <p>最小投标<span id="borrow-info-minbid">20.00</span></p>
+            </div>
+            <div class="col-3 person-borrow-info-box3">
+                <p>投标总数<span>0</span></p>
+                <p>还需金额<span id="borrow-info-need">0.00元</span></p>
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-10">
+                        <div class="progress" id="borrow-info-progress">
+                            <!-- <div class="progress-bar"
                             style="width: 90%; background: linear-gradient(to right, #da81a1 35%,#7aa4c8 68%);">
-                            <div class="progress-value">90%</div>
+                            <div class="progress-value">90%</div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- <p><span id="borrow-info-type">还款中</span></p> -->
+                <div class="mt-5">
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop"
+                        id="confirm">决定资助他</button>
+                    <a class="btn btn-secondary text-white" href="#invest">再看看其他人</a>
+                </div>
+                <div class="modal fade modal-dialog modal-dialog-centered position-absolute" style="display: none;"
+                    id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header pb-0">
+                                <h5 class="modal-title" id="staticBackdropLabel">投资一笔</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>最小投标<span id="chargeMinbid"></span></p>
+                                <p>还需金额<span id="chargeNeed"></span></p>
+                                <input type="text" class="form-control" placeholder="投资金额" id="chargeMoney">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">再想想</button>
+                                <button type="button" class="btn btn-primary" id="chargeConfirm">确认投资</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <p><span>还款中</span></p>
+
         </div>
-    </div>
-    <div class="person-borrow-info-box4 mt-3">
-        <p class="fs20">借款人姓名</p>
-        <table class="table">
-            <tr>
-                <td>
-                    <p>注册时间<span>2015-03-30</span></p>
-                </td>
-                <td>
-                    <p>借款额度<span>2000.00</span></p>
-                </td>
-                <td>
-                    <p> 性别<span>男</span></p>
-                </td>
-                <td>
-                    <p>年龄<span>25</span></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>文化程度<span>硕士研究生</span></p>
-                </td>
-                <td>
-                    <p>每月收入<span>3000-4999</span></p>
-                </td>
-            </tr>
-        </table>
 
-    </div>
-    <div class="person-borrow-info-box4 mt-3">
-        <p class="fs20">借款人姓名</p>
-        <table class="table">
-            <tr>
-                <td>
-                    <p>认证时态度<span>优</span></p>
-                </td>
-                <td>
-                    <p>信贷知识掌握<span>优</span></p>
-                </td>
-                <td>
-                    <p>借款感言<span>请借我20豁奶茶</span></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>审核员认证意见<span>同意</span></p>
-                </td>
-            </tr>
-        </table>
+        <div class="person-borrow-info-box4 mt-3">
+            <p class="fs20">借款人信息</p>
+            <table class="table">
+                <tr>
+                    <td>
+                        <p>注册时间<span>2015-03-30</span></p>
+                    </td>
+                    <td>
+                        <p>借款额度<span>2000.00</span></p>
+                    </td>
+                    <td>
+                        <p> 性别<span>男</span></p>
+                    </td>
+                    <td>
+                        <p>年龄<span>25</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>文化程度<span>硕士研究生</span></p>
+                    </td>
+                    <td>
+                        <p>每月收入<span>3000-4999</span></p>
+                    </td>
+                </tr>
+            </table>
 
-    </div>
-    <div class="person-borrow-info-box4 mt-3">
-        <p class="fs20">借款人姓名</p>
-        <table class="table">
-            <tr>
-                <th>
-                    <p>材料类型</p>
-                </th>
-                <th>
-                    <p>材料数量</p>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <p>本人身份证</p>
-                </td>
-                <td>
-                    <p>2</p>
-                </td>
-            </tr>
-        </table>
+        </div>
+        <div class="person-borrow-info-box4 mt-3">
+            <p class="fs20">审核认证信息</p>
+            <table class="table">
+                <tr>
+                    <td>
+                        <p>认证时态度<span>优</span></p>
+                    </td>
+                    <td>
+                        <p>信贷知识掌握<span>优</span></p>
+                    </td>
+                    <td>
+                        <p>借款感言<span>请借我20豁奶茶</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>审核员认证意见<span>同意</span></p>
+                    </td>
+                </tr>
+            </table>
 
-    </div>
-    <div class="person-borrow-info-box4 mt-3">
-        <p class="fs20">还款情况</p>
-        <table class="table">
-            <tr>
-                <th>
-                    <p>还款状态</p>
-                </th>
-                <th>
-                    <p>最近一周</p>
-                </th>
-                <th>
-                    <p>最近1月</p>
-                </th>
-                <th>
-                    <p>最近6月</p>
-                </th>
-                <th>
-                    <p>6个月前</p>
-                </th>
-                <th>
-                    <p>总计[?]</p>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <p>提前还款</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>准时还款</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>逾期已还</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>逾期未还</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-                <td>
-                    <p>0</p>
-                </td>
-            </tr>
-        </table>
+        </div>
+        <div class="person-borrow-info-box4 mt-3">
+            <p class="fs20">材料信息</p>
+            <table class="table">
+                <tr>
+                    <th>
+                        <p>材料类型</p>
+                    </th>
+                    <th>
+                        <p>材料数量</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>本人身份证</p>
+                    </td>
+                    <td>
+                        <p>2</p>
+                    </td>
+                </tr>
+            </table>
 
-    </div>
-    <div class="person-borrow-info-box4 mt-3">
-        <p class="fs20">投标记录</p>
-        <table class="table">
-            <tr>
-                <th>
-                    <p>投标人</p>
-                </th>
-                <th>
-                    <p>年利率</p>
-                </th>
-                <th>
-                    <p>有效金额(¥)</p>
-                </th>
-                <th>
-                    <p>投标时间</p>
-                </th>
-                <th>
-                    <p>类型</p>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <p>si*****</p>
-                </td>
-                <td>
-                    <p>10%</p>
-                </td>
-                <td>
-                    <p>1,000.00</p>
-                </td>
-                <td>
-                    <p>2016-05-11 06:42:11</p>
-                </td>
-                <td>
-                    手动投标
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>si*****</p>
-                </td>
-                <td>
-                    <p>10%</p>
-                </td>
-                <td>
-                    <p>1,000.00</p>
-                </td>
-                <td>
-                    <p>2016-05-11 06:42:11</p>
-                </td>
-                <td>
-                    手动投标
-                </td>
-            </tr>
-        </table>
+        </div>
+
 
     </div>
 </div>
 
+
 <link rel="stylesheet" href="../dist/css/borrow_info.min.css">
+<script src="../js/borrow-info.js"></script>

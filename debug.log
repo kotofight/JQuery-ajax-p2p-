@@ -1,0 +1,8 @@
+[1021/102935.639:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\asus\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\9453bb6e-f2f1-4194-8619-5ac479ce29b8: 系统找不到指定的路径。 (0x3)
+[1021/102935.645:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\asus\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\d96a40d1-4faa-4f42-b5b4-aea17cc367fc: 系统找不到指定的路径。 (0x3)
+[1021/102935.645:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1021/141003.553:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1022/085507.782:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1022/152856.539:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1022/190305.990:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1022/213347.572:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)

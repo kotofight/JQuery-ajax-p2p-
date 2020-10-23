@@ -1,12 +1,17 @@
  @import "./common.less";
 
  .active {
-     background-color: #1C3368;
+     background-color: #F5D041;
      color           : #fff !important;
 
  }
 
  .headnav {
+     .logo {
+         width : 148px;
+         height: 100px;
+     }
+
      li {
          box-sizing: border-box;
          width     : 100px;
@@ -16,6 +21,23 @@
          a {
              display: inline-block;
              width  : 100%;
+         }
+     }
+
+     .head-slogan {
+         margin-left   : 200px;
+         letter-spacing: 10px;
+         font-family   : 楷体;
+
+         .slogan1 {
+             color      : #50C224;
+             font-weight: bold;
+             font-size  : 70px;
+         }
+
+         .slogan2 {
+             color    : #38D88E;
+             font-size: 40px;
          }
      }
 
@@ -57,11 +79,11 @@
                      color: #6C757D;
                  }
 
-                 button {
-                     color: @colorfff;
-                 }
+
              }
          }
+
+
      }
 
      .new {

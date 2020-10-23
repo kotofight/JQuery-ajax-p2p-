@@ -1,4 +1,9 @@
 $(function () {
+    let u = localStorage.username
+    if (u != 'null') {
+        $('#username').val(u)
+        $('input[name=remember]').prop('checked', true)
+    }
     // console.log(111)
     $('#loginbtn').on('click', function () {
         // alert(111)
@@ -19,6 +24,11 @@ $(function () {
                     var data = data.data;
                     localStorage.setItem('user', JSON.stringify(data))
                     alert(msg);
+                    if ($('input[name=remember]').is(':checked')) {
+                        localStorage.setItem('username', username)
+                    } else {
+                        localStorage.username = null
+                    }
                     location.href = '../index.html'
                 } else if (code === 500) {
                     alert(msg)

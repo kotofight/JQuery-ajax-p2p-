@@ -1,0 +1,78 @@
+ .news {
+     ul {
+         li {
+             a {
+                 span {
+                     &:first-child {
+                         width        : 350px;
+                         text-overflow: ellipsis;
+                         overflow     : hidden;
+                         white-space  : nowrap;
+                     }
+                 }
+             }
+
+         }
+     }
+ }
+
+ /* 外面盒子样式---自己定义 */
+ .page_div {
+     margin: 20px 10px 20px 0;
+     color : #666
+ }
+
+ /* 页数按钮样式 */
+ .page_div button {
+     display           : inline-block;
+     min-width         : 30px;
+     height            : 28px;
+     cursor            : pointer;
+     color             : #666;
+     font-size         : 13px;
+     line-height       : 28px;
+     background-color  : #f9f9f9;
+     border            : 1px solid #dce0e0;
+     text-align        : center;
+     margin            : 0 4px;
+     -webkit-appearance: none;
+     -moz-appearance   : none;
+     appearance        : none;
+ }
+
+ #firstPage,
+ #lastPage,
+ #nextPage,
+ #prePage {
+     width : 50px;
+     color : #50C224;
+     border: 1px solid #50C224
+ }
+
+ #nextPage,
+ #prePage {
+     width: 70px
+ }
+
+ .page_div .current {
+     background-color: #50C224;
+     border-color    : #50C224;
+     color           : #FFF
+ }
+
+ /* 页面数量 */
+ .totalPages {
+     margin: 0 10px
+ }
+
+ .totalPages span,
+ .totalSize span {
+     color : #50C224;
+     margin: 0 5px
+ }
+
+ /*button禁用*/
+ .page_div button:disabled {
+     opacity: .5;
+     cursor : no-drop
+ }

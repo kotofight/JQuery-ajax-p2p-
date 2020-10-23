@@ -13,7 +13,7 @@ $(function () {
                 type: 'post',
                 data: {
                     userid,
-                    borrowType: 1,
+                    borrowType: localStorage.type,
                     borrowmoney: $('#borrow-number').val(),
                     interest: $('#borrow-interest').val(),
                     borrowtime: $('#borrow-term').val(),
@@ -28,6 +28,7 @@ $(function () {
                     var { code, msg } = data;
                     if (code === 200) {
                         alert(msg)
+                        location.href = '#borrow'
                     } else if (code === 500) {
                         alert(msg)
                     }
@@ -38,5 +39,14 @@ $(function () {
         }
 
     })
+
+    switch (localStorage.type) {
+        case '1': $('#borrowBadge').html('信用标')
+            break;
+        case '2': $('#borrowBadge').html('车易贷')
+            break;
+        case '3': $('#borrowBadge').html('房易贷')
+            break;
+    }
 
 })
